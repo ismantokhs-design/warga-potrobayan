@@ -1,8 +1,8 @@
 {
   "name": "WargaKu PWA",
-  "short_name": "WargaKu",
+  "short_name": "WargaKita",
   "description": "Sistem Informasi Pendataan Warga RT Potrobayan",
-  "id": "wargaku-pwa-v1",
+  "id": "wargakita-pwa-v1",
   "start_url": "index.html",
   "scope": "./",
   "display": "standalone",
