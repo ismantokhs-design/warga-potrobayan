@@ -1,25 +1,25 @@
 {
-  "short_name": "WargaPotro",
-  "name": "Warga Potrobayan",
-  "id": "warga-potrobayan-test-pwa",
-  "start_url": "index.html",
-  "scope": "./",
+  "name": "Test PWA",
+  "short_name": "TEST",
+  "description": "Pengujian PWA",
+  "id": "/test/",
+  "start_url": "/test/index.html",
+  "scope": "/test/",
   "display": "standalone",
-  "background_color": "#10b981",
-  "theme_color": "#10b981",
-  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
   "icons": [
     {
       "src": "icon.png",
-      "type": "image/png",
       "sizes": "192x192",
-      "purpose": "any maskable"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "icon2.png",
-      "type": "image/png",
       "sizes": "512x512",
-      "purpose": "any maskable"
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
