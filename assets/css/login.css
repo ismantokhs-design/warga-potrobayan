@@ -1,0 +1,196 @@
+/* ==========================================================================
+   STYLING FORM LOGIN (COMPACT, NO-SCROLL, SMOOTH & ELEGANT)
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* Mencegah scrollbar muncul */
+}
+
+.login-body {
+  background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  height: 100vh;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 360px;
+}
+
+.login-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px 18px;
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.05), 
+              0 8px 10px -6px rgba(0, 0, 0, 0.01),
+              0 0 0 1px rgba(0, 0, 0, 0.03);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.brand-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  background: #ecfdf5;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  box-shadow: inset 0 2px 4px rgba(16, 185, 129, 0.1);
+}
+
+.brand-icon {
+  font-size: 1.6rem;
+}
+
+.login-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.02em;
+}
+
+.login-subtitle {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* Alert Pesan Error */
+.login-error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #ef4444;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  margin-bottom: 14px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* Group Input Form */
+.input-group {
+  margin-bottom: 14px;
+}
+
+.input-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 1rem;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 14px 10px 40px;
+  font-size: 0.875rem;
+  color: #0f172a;
+  background-color: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus {
+  background-color: #ffffff;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
+}
+
+/* Tombol Cek Password (Eye Icon) */
+.btn-toggle-pwd {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  border-radius: 6px;
+  transition: color 0.2s ease;
+}
+
+.btn-toggle-pwd:hover {
+  color: #334155;
+}
+
+.pwd-svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Tombol Masuk */
+.btn-login {
+  width: 100%;
+  padding: 11px;
+  margin-top: 4px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+  transition: all 0.2s ease;
+}
+
+.btn-login:hover {
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-login:active {
+  transform: translateY(0);
+}
+
+.btn-login:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Footer Login */
+.login-footer {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.775rem;
+  color: #64748b;
+  line-height: 1.4;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 14px;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Warga Potrobayan</title>
+  
+  <!-- Manifest & PWA Meta Config -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#10b981">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="WargaPotro">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2.1">
+</head>
+<body>
+
+  <!-- Header Utama dengan Tombol Logout -->
+  <header class="header">
+    <div class="header-brand">
+      <h1 id="header-title">Warga Potrobayan</h1>
+      <span class="header-icon">🌾</span>
+    </div>
+    <button id="btn-logout" class="btn-icon-logout" title="Keluar">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="header-logout-svg">
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+        <polyline points="16 17 21 12 16 7"></polyline>
+        <line x1="21" y1="12" x2="9" y2="12"></line>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Container Konten Utama -->
+  <main id="main-content" class="content">
+    <div class="card" style="text-align: center; padding: 30px 15px;">
+      <p style="color: var(--text-muted);">Memeriksa status login...</p>
+    </div>
+  </main>
+
+  <!-- Bottom Bar Navigasi -->
+  <nav class="bottom-bar">
+    <button class="nav-item active" onclick="navigateTo('beranda', this)">
+      <span class="nav-icon">🏠</span>
+      <span>Beranda</span>
+    </button>
+    
+    <button class="nav-item" onclick="navigateTo('profil', this)">
+      <span class="nav-icon">📍</span>
+      <span>Profil</span>
+    </button>
+    
+    <button class="nav-item" onclick="navigateTo('galeri', this)">
+      <span class="nav-icon">🖼️</span>
+      <span>Galeri</span>
+    </button>
+    
+    <button class="nav-item" onclick="navigateTo('event', this)">
+      <span class="nav-icon">📅</span>
+      <span>Event</span>
+    </button>
+    
+    <!-- Tombol More (Disembunyikan secara default menggunakan kelas 'hidden') -->
+    <button id="nav-more" class="nav-item hidden" onclick="navigateTo('more', this)">
+      <span class="nav-icon">⚙️</span>
+      <span>More</span>
+    </button>
+  </nav>
+
+  <!-- Modal Custom Logout -->
+  <div id="logout-modal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-icon-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logout-svg">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <polyline points="16 17 21 12 16 7"></polyline>
+          <line x1="21" y1="12" x2="9" y2="12"></line>
+        </svg>
+      </div>
+      <h3 class="modal-title">Konfirmasi Keluar</h3>
+      <p class="modal-text">Apakah Anda yakin ingin keluar dari aplikasi Warga Potrobayan?</p>
+      <div class="modal-actions">
+        <button id="btn-cancel-logout" class="btn-modal btn-cancel">Batal</button>
+        <button id="btn-confirm-logout" class="btn-modal btn-confirm">Ya, Keluar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Utama Aplikasi -->
+  <script type="module" src="assets/js/app.js?v=2.1"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!-- Card Sapaan Warga -->
+<div class="card" style="background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); color: white;">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <p style="font-size: 0.85rem; opacity: 0.9;">Sugeng Rawuh,</p>
+      <h2 id="user-display-name" style="font-size: 1.3rem; margin-top: 2px;">Warga Potrobayan</h2>
+    </div>
+    <div style="font-size: 2.2rem;">🏡</div>
+  </div>
+  <p style="font-size: 0.8rem; margin-top: 12px; opacity: 0.95; background: rgba(255,255,255,0.15); padding: 6px 10px; border-radius: 6px; display: inline-block;">
+    📍 Dusun Potrobayan, Srihardono, Pundong
+  </p>
+</div>
+
+<!-- Quick Info / Ringkasan Dusun -->
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 12px; margin-bottom: 15px;">
+  <div class="card" style="text-align: center; padding: 12px;">
+    <span style="font-size: 1.5rem;">📣</span>
+    <h4 style="font-size: 0.85rem; margin-top: 4px; color: var(--text-muted);">Pengumuman</h4>
+    <p id="count-pengumuman" style="font-size: 1.1rem; font-weight: bold; color: var(--primary-dark);">--</p>
+  </div>
+  <div class="card" style="text-align: center; padding: 12px;">
+    <span style="font-size: 1.5rem;">📅</span>
+    <h4 style="font-size: 0.85rem; margin-top: 4px; color: var(--text-muted);">Agenda Dekat</h4>
+    <p id="count-agenda" style="font-size: 1.1rem; font-weight: bold; color: var(--primary-dark);">--</p>
+  </div>
+</div>
+
+<!-- Daftar Pengumuman Terbaru -->
+<h3 style="font-size: 1rem; margin-bottom: 10px; color: var(--text-main); display: flex; align-items: center; gap: 6px;">
+  <span>📢</span> Pengumuman Terbaru
+</h3>
+
+<div id="pengumuman-list">
+  <!-- Contoh Tampilan Card Loading / Statis Awal -->
+  <div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+      <h4 style="font-size: 0.95rem; color: var(--text-main);">Kerja Bakti Bersama Persiapan Kemerdekaan</h4>
+      <span style="font-size: 0.75rem; color: var(--text-muted); background: var(--bg-color); padding: 2px 6px; border-radius: 4px;">Penting</span>
+    </div>
+    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
+      Diharapkan kehadiran seluruh warga RT 01 - RT 04 dalam kegiatan kerja bakti pembersihan lingkungan dusun pada hari Minggu besok.
+    </p>
+    <div style="margin-top: 10px; font-size: 0.75rem; color: var(--text-muted); display: flex; justify-content: space-between;">
+      <span>👤 Admin Dusun</span>
+      <span>🕒 2 jam yang lalu</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+      <h4 style="font-size: 0.95rem; color: var(--text-main);">Jadwal Posyandu Balita & Lansia</h4>
+      <span style="font-size: 0.75rem; color: var(--primary-dark); background: var(--primary-light); padding: 2px 6px; border-radius: 4px;">Rutin</span>
+    </div>
+    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
+      Kegiatan posyandu bulan ini akan dilaksanakan di Pos Posyandu Dusun mulai pukul 08.00 WIB.
+    </p>
+    <div style="margin-top: 10px; font-size: 0.75rem; color: var(--text-muted); display: flex; justify-content: space-between;">
+      <span>👤 Kader Kesehatan</span>
+      <span>🕒 Kemarin</span>
+    </div>
+  </div>
+</div>

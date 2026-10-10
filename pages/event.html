@@ -1,0 +1,101 @@
+<!-- Header Agenda & Event -->
+<div class="card" style="text-align: center; padding: 15px;">
+  <h2 style="font-size: 1.1rem; color: var(--primary-dark);">📅 Agenda & Event Dusun</h2>
+  <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">
+    Jadwal kegiatan masyarakat, keagamaan, dan pertemuan warga Dusun Potrobayan
+  </p>
+</div>
+
+<!-- Tab Filter Sederhana -->
+<div style="display: flex; border-bottom: 1px solid var(--border-color); margin-bottom: 15px; background: white; border-radius: 8px; padding: 4px;">
+  <button class="btn" style="flex: 1; padding: 8px; font-size: 0.8rem; background: var(--primary-color); color: white;" onclick="switchEventTab('agenda', this)">Agenda Warga</button>
+  <button class="btn" style="flex: 1; padding: 8px; font-size: 0.8rem; background: transparent; color: var(--text-muted);" onclick="switchEventTab('ronda', this)">Jadwal Ronda</button>
+</div>
+
+<!-- Konten 1: Agenda Dusun -->
+<div id="tab-agenda">
+
+  <!-- Card Event 1 -->
+  <div class="card" style="border-left: 4px solid var(--primary-color);">
+    <div style="display: flex; gap: 12px; align-items: center;">
+      <div style="background: var(--primary-light); color: var(--primary-dark); padding: 8px 12px; border-radius: 8px; text-align: center; min-width: 55px;">
+        <span style="font-size: 0.75rem; display: block; font-weight: bold; text-transform: uppercase;">MNG</span>
+        <span style="font-size: 1.2rem; font-weight: bold;">18</span>
+      </div>
+      <div>
+        <h4 style="font-size: 0.9rem; color: var(--text-main);">Kerja Bakti Masal RT 01-04</h4>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">
+          📍 Lapangan & Jalan Utama Dusun
+        </p>
+        <p style="font-size: 0.75rem; color: var(--primary-dark); font-weight: 600; margin-top: 4px;">
+          🕒 06.30 WIB - Selesai
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card Event 2 -->
+  <div class="card" style="border-left: 4px solid #f59e0b;">
+    <div style="display: flex; gap: 12px; align-items: center;">
+      <div style="background: #fef3c7; color: #d97706; padding: 8px 12px; border-radius: 8px; text-align: center; min-width: 55px;">
+        <span style="font-size: 0.75rem; display: block; font-weight: bold; text-transform: uppercase;">RBU</span>
+        <span style="font-size: 1.2rem; font-weight: bold;">21</span>
+      </div>
+      <div>
+        <h4 style="font-size: 0.9rem; color: var(--text-main);">Kumpulan Rutin RT 02</h4>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">
+          📍 Rumah Bpk. Ketua RT 02
+        </p>
+        <p style="font-size: 0.75rem; color: #d97706; font-weight: 600; margin-top: 4px;">
+          🕒 19.30 WIB (Ba'da Isya)
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card Event 3 -->
+  <div class="card" style="border-left: 4px solid #3b82f6;">
+    <div style="display: flex; gap: 12px; align-items: center;">
+      <div style="background: #dbeafe; color: #1d4ed8; padding: 8px 12px; border-radius: 8px; text-align: center; min-width: 55px;">
+        <span style="font-size: 0.75rem; display: block; font-weight: bold; text-transform: uppercase;">JMT</span>
+        <span style="font-size: 1.2rem; font-weight: bold;">23</span>
+      </div>
+      <div>
+        <h4 style="font-size: 0.9rem; color: var(--text-main);">Posyandu Balita & Lansia</h4>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">
+          📍 Pos Posyandu Dusun
+        </p>
+        <p style="font-size: 0.75rem; color: #1d4ed8; font-weight: 600; margin-top: 4px;">
+          🕒 08.00 WIB - 11.00 WIB
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Konten 2: Jadwal Ronda (Hidden awal) -->
+<div id="tab-ronda" class="hidden">
+  <div class="card">
+    <h3 style="font-size: 0.95rem; color: var(--text-main); margin-bottom: 10px;">🛡️ Jadwal Ronda Pos Ronda Utama</h3>
+    
+    <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem;">
+      <div style="display: flex; justify-content: space-between; padding-bottom: 6px; border-bottom: 1px solid var(--border-color);">
+        <strong>Senin:</strong>
+        <span style="color: var(--text-muted);">Kelompok 1 (Bpk. Ahmad, Bpk. Budi, dll)</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; padding-bottom: 6px; border-bottom: 1px solid var(--border-color);">
+        <strong>Selasa:</strong>
+        <span style="color: var(--text-muted);">Kelompok 2 (Bpk. Cipto, Bpk. Dwi, dll)</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; padding-bottom: 6px; border-bottom: 1px solid var(--border-color);">
+        <strong>Rabu:</strong>
+        <span style="color: var(--text-muted);">Kelompok 3 (Bpk. Eko, Bpk. Fajar, dll)</span>
+      </div>
+      <div style="display: flex; justify-content: space-between;">
+        <strong>Kamis:</strong>
+        <span style="color: var(--text-muted);">Kelompok 4 (Bpk. Gunawan, Mas Hadi, dll)</span>
+      </div>
+    </div>
+  </div>
+</div>
