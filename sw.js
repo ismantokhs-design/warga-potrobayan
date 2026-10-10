@@ -1,35 +1,13 @@
-const CACHE_NAME = 'test-pwa-v1';
-const ASSETS = [
-  '/test/',
-  '/test/index.html',
-  '/test/manifest.json',
-  '/test/app.js',
-  '/test/icon.png',
-  '/test/icon2.png'
-];
+const CACHE_NAME = 'wargaku-v1';
 
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS))
-  );
+self.addEventListener('install', (e) => {
   self.skipWaiting();
 });
 
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((keys) => {
-      return Promise.all(
-        keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
-      );
-    })
-  );
-  self.clients.claim();
+self.addEventListener('activate', (e) => {
+  return self.clients.claim();
 });
 
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      return cachedResponse || fetch(event.request);
-    })
-  );
+self.addEventListener('fetch', (e) => {
+  e.respondWith(fetch(e.request));
 });
