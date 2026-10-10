@@ -3,14 +3,14 @@
    ========================================================================== */
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js')
+    navigator.serviceWorker.register('./sw.js')
       .then((reg) => console.log('SW Registered:', reg.scope))
       .catch((err) => console.error('SW Error:', err));
   });
 }
 
 /* ==========================================================================
-   2. IMPORT FIREBASE AUTH, LOGOUT & DATA USER
+   2. IMPORT FIREBASE AUTH, LOGOUT & DATA USER (JALUR PRESISI)
    ========================================================================== */
 import { 
   monitorAuthState, 
@@ -93,7 +93,6 @@ function checkAdminAccess() {
   const btnMore = document.getElementById('nav-more');
   if (!btnMore) return;
 
-  // Hanya tampilkan menu More jika user adalah Admin / Pengurus
   if (currentUserRole.isLoggedIn && currentUserRole.isAdmin) {
     btnMore.classList.remove('hidden');
   } else {
