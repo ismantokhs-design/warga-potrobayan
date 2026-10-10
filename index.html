@@ -3,17 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WargaKu PWA</title>
-  
+  <title>Warga Potrobayan</title>
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#2563eb">
-  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#0d6efd">
 </head>
 <body>
+  <h1>Aplikasi Warga Potrobayan</h1>
+  <button id="btnNotif">Aktifkan Notifikasi</button>
 
-  <h1>WargaKu PWA</h1>
-  <p>Sistem Informasi Pendataan Warga & Iuran RT Potrobayan Yessssssssssss</p>
+  <script>
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('SW terdaftar!'))
+        .catch(err => console.error('Gagal daftar SW:', err));
+    }
 
-  <script src="app.js"></script>
+    // Minta izin Notifikasi
+    document.getElementById('btnNotif').addEventListener('click', () => {
+      Notification.requestPermission().then(permission => {
+        if (permission === 'granted') {
+          alert('Izin notifikasi diberikan!');
+        } else {
+          alert('Izin notifikasi ditolak/diblokir.');
+        }
+      });
+    });
+  </script>
 </body>
 </html>

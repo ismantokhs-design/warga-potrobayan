@@ -1,13 +1,22 @@
-const CACHE_NAME = 'wargaku-v1';
-
-self.addEventListener('install', (e) => {
+self.addEventListener('install', (event) => {
   self.skipWaiting();
 });
 
-self.addEventListener('activate', (e) => {
-  return self.clients.claim();
+self.addEventListener('activate', (event) => {
+  event.waitUntil(clients.claim());
 });
 
-self.addEventListener('fetch', (e) => {
-  e.respondWith(fetch(e.request));
+// Menangani Push Notification yang masuk
+self.addEventListener('push', (event) => {
+  const data = event.data ? event.data.text() : 'Notifikasi Warga Potrobayan';
+  
+  const options = {
+    body: data,
+    icon: 'icon.png',
+    badge: 'icon.png'
+  };
+
+  event.waitUntil(
+    self.registration.showNotification('Warga Potrobayan', options)
+  );
 });
