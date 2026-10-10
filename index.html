@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Warga Potrobayan</title>
+  <title>Warga Potrobayan v2</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0d6efd">
 </head>
 <body>
-  <h1>Aplikasi Warga Potrobayan</h1>
+  <h1>Aplikasi Warga Potrobayan v2</h1>
   <button id="btnNotif">Aktifkan Notifikasi</button>
 
   <script>
     // Register Service Worker
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js')
-        .then(() => console.log('SW terdaftar!'))
+      navigator.serviceWorker.register('sw.js?v=2')
+        .then(() => console.log('SW v2 terdaftar!'))
         .catch(err => console.error('Gagal daftar SW:', err));
     }
 

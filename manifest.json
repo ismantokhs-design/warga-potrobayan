@@ -1,7 +1,8 @@
 {
-  "name": "Warga Potrobayan",
-  "short_name": "Potrobayan",
-  "start_url": "./index.html",
+  "id": "/?v=2",
+  "name": "Warga Potrobayan v2",
+  "short_name": "Potrobayan v2",
+  "start_url": "./index.html?v=2",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0d6efd",
@@ -12,7 +13,7 @@
       "type": "image/png"
     },
     {
-      "src": "icon.png",
+      "src": "icon2.png",
       "sizes": "512x512",
       "type": "image/png"
     }

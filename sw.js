@@ -1,3 +1,5 @@
+// Service Worker Version: v2
+
 self.addEventListener('install', (event) => {
   self.skipWaiting();
 });
@@ -17,6 +19,6 @@ self.addEventListener('push', (event) => {
   };
 
   event.waitUntil(
-    self.registration.showNotification('Warga Potrobayan', options)
+    self.registration.showNotification('Warga Potrobayan v2', options)
   );
 });
