@@ -3,32 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Warga Potrobayan v2</title>
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0d6efd">
+  <title>Warga Potrobayan</title>
+
+  <link rel="manifest" href="manifest.json?v=1">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon.png?v=1">
+  <link rel="apple-touch-icon" href="icon2.png?v=1">
+  <meta name="theme-color" content="#198754">
 </head>
 <body>
-  <h1>Aplikasi Warga Potrobayan v2</h1>
-  <button id="btnNotif">Aktifkan Notifikasi</button>
+
+  <h1>Warga Potrobayan</h1>
 
   <script>
-    // Register Service Worker
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js?v=2')
-        .then(() => console.log('SW v2 terdaftar!'))
-        .catch(err => console.error('Gagal daftar SW:', err));
-    }
-
-    // Minta izin Notifikasi
-    document.getElementById('btnNotif').addEventListener('click', () => {
-      Notification.requestPermission().then(permission => {
-        if (permission === 'granted') {
-          alert('Izin notifikasi diberikan!');
-        } else {
-          alert('Izin notifikasi ditolak/diblokir.');
-        }
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log('SW Potrobayan Berhasil:', reg.scope))
+          .catch(err => console.error('SW Potrobayan Gagal:', err));
       });
-    });
+    }
   </script>
 </body>
 </html>

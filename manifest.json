@@ -1,9 +1,9 @@
 {
-  "id": "/warga-potrobayan/",
-  "scope": "/warga-potrobayan/",
+  "id": "warga-potrobayan-app",
+  "scope": "./",
   "name": "Warga Potrobayan",
   "short_name": "Potrobayan",
-  "start_url": "/warga-potrobayan/index.html?v=1",
+  "start_url": "./index.html?v=1",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#198754",
